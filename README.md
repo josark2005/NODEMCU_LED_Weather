@@ -31,12 +31,15 @@ A NodeMCU project which shows weather report with different led light.
 
 ## 安装 / Install
 
-- 修改`init.lua`中的配置，填入WiFi信息与知心天气的SK (Modify the configurations)
+- 修改`init.lua`中的配置，填入WiFi信息、地理位置拼音与知心天气的SK (Modify the configurations)
 
 ```lua
 -- configurations
 wifi_ssid = "WIFI_SSID"
 wifi_pwd = "WIFI_PASSWORD"
+
+location = "yourCity"
+
 -- 知心天气
 weather_sk = ""
 ```

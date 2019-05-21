@@ -2,7 +2,7 @@
 -- !!global variale busy_flag needed
 print "-- weather module has loaded"
 wt = {}
-link = "https://api.seniverse.com/v3/weather/now.json?key="..weather_sk.."&location=jiashan&language=zh-Hans&unit=c"
+link = "https://api.seniverse.com/v3/weather/now.json?key="..weather_sk.."&location="..location.."&language=zh-Hans&unit=c"
 function wt.get(pin_status, pin_warning, busy_led)
     print('loading...')
     -- clear lights

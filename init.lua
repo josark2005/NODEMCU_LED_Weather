@@ -6,6 +6,8 @@
 wifi_ssid = "WIFI_SSID"
 wifi_pwd = "WIFI_PASSWORD"
 
+location = "yourCity"
+
 -- 知心天气
 weather_sk = ""
 
