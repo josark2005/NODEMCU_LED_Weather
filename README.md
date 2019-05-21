@@ -1,5 +1,7 @@
 # LED_Weather
 
+![demo](./demo.jpg)
+
 用LED简单显示天气信息，红色表示需要带伞， 绿色表示无需带伞，同时亮起表示请求失败。
 
 A NodeMCU project which shows weather report with different led light.
