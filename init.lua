@@ -21,6 +21,8 @@ pin_btn_led = 3
 -- initialize
 gpio.mode(pin_btn_led, gpio.OUTPUT)
 gpio.write(pin_btn_led, gpio.LOW)
+gpio.mode(pin_warning, gpio.OUTPUT)
+gpio.write(pin_warning, gpio.LOW)
 
 require("wifi_controller")
 require("weather")
