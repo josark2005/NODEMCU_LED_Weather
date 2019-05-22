@@ -22,16 +22,11 @@ function wt.get(pin_status, pin_warning, busy_led)
             print(code, data)
             if (code ~= 200) then
                 -- blink 2 leds to show error
+                print('warning')
                 pwm.setup(pin_status, 100, 20)
                 pwm.start(pin_status)
                 pwm.setup(pin_warning, 100, 20)
                 pwm.start(pin_warning)
-                local tobj = tmr.create()
-                gpio.trig(pin_btn)
-                tobj:alarm(1000, tmr.ALARM_SINGLE, function()
-                    pwm.stop(pin_status)
-                    pwm.stop(pin_warning)
-                end)
             else
                 -- show weather status
                 local ret = sjson.decode(data)
