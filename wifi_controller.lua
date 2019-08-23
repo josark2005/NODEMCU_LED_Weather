@@ -14,7 +14,7 @@ end
 -- listen
 wifi.eventmon.register(wifi.eventmon.STA_CONNECTED,function(t)
     print('-- wifi connected')
-    pwm.setup(pin_wifi, 100, 5)
+    pwm.setup(pin_wifi, 100, 10)
     pwm.start(pin_wifi)
 end)
 

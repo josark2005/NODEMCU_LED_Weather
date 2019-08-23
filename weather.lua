@@ -10,7 +10,7 @@ function wt.get(pin_status, pin_warning, busy_led)
     pwm.stop(pin_warning)
     print(link)
     busy_flag = 1
-    pwm.setup(busy_led, 100, 10)
+    pwm.setup(busy_led, 100, 128)
     pwm.start(busy_led)
     http.get(link, nil, function(code, data)
         print('complete')
@@ -23,20 +23,20 @@ function wt.get(pin_status, pin_warning, busy_led)
             if (code ~= 200) then
                 -- blink 2 leds to show error
                 print('warning')
-                pwm.setup(pin_status, 100, 20)
+                pwm.setup(pin_status, 100, 128)
                 pwm.start(pin_status)
-                pwm.setup(pin_warning, 100, 20)
+                pwm.setup(pin_warning, 100, 128)
                 pwm.start(pin_warning)
             else
                 -- show weather status
                 local ret = sjson.decode(data)
                 if (tonumber(ret['results'][1]['now']['code']) <= 9) then
                     -- nice day
-                    pwm.setup(pin_status, 100, 20)
+                    pwm.setup(pin_status, 100, 128)
                     pwm.start(pin_status)
                 else
                     -- others show warning
-                    pwm.setup(pin_warning, 100, 20)
+                    pwm.setup(pin_warning, 100, 128)
                     pwm.start(pin_warning)
                 end
             end
