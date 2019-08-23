@@ -32,6 +32,7 @@ wf.conn(wifi_ssid, wifi_pwd)
 
 -- weather
 gpio.mode(pin_btn, gpio.INT)
+gpio.write(pin_btn, gpio.HIGH)
 busy_flag = 0
 function onBtnUp()
     print('pressed')
