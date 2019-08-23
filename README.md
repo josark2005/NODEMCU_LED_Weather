@@ -14,13 +14,21 @@ A NodeMCU project which shows weather report with different led light.
 
 ## 脚定义 / Pins Definition
 
+|Pin|类型|备注|
+|:-:|:-:|:-|
+|2|WiFi状态|常亮即WiFi已经连接|
+|1|天气状态(阴晴无雨)|常亮即晴或多云或阴|
+|6|天气状态(非阴晴)|常亮即雨或其他极端天气（需要带伞或不宜出门）|
+|3|更新状态|常亮即正在获取新天气数据|
+|7|更新按钮|按下以获取最新天气数据|
+
 |Pin|Type|Remark|
 |:-:|:-:|:-|
 |2|WiFi status|Always on shows that WiFi is connected|
 |1|Weather status (Green)|Always on shows that you do not need to take an umbrella|
 |6|Weather status (Red)|Always on shows that you need to take an umbrella|
 |3|Query status|Always on shows that system is querying the weather infomation|
-|7|Query button (link from pin 2)|Click to renew the weather infomation|
+|7|Query button|Click to renew the weather infomation|
 
 ## 依赖 / Dependancies
 
